@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>字体</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Eina/style.css">
+  <link rel="stylesheet" href="Eina03/style.css">
+  <link rel="stylesheet" href="BookmanOldStyle/style.css">
+  <link rel="icon" href="https://hezulong1.github.io/logo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+    }
+
+    body:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    fieldset {
+      float: left;
+      height: 40vh;
+      margin: 0 0 20px 20px;
+      padding: 12px;
+      border: 1px solid #222;
+      box-sizing: border-box;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .news {
+      font-family: "BookmanOldStyle", 'STSong','SimSun','MingLiU','宋体', serif;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function createFieldset(fontFamily, className) {
+      var legend = document.createElement('legend')
+      legend.innerHTML = fontFamily
+      
+      var div = document.createElement('div')
+      div.innerHTML = [
+        `<p style="font-family: ${fontFamily}">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>`,
+        `<p style="font-family: ${fontFamily}">abcdefghijklmnopqrstuvwxyz</p>`,
+        `<p style="font-family: ${fontFamily}">0123456789!@#~$%^&*()_+-./</p>`,
+        `<p style="font-family: ${fontFamily}">你好，世界</p>`,
+        `<p style="font-family: ${fontFamily}; font-weight: 600">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>`,
+        `<p style="font-family: ${fontFamily}; font-weight: 600">abcdefghijklmnopqrstuvwxyz</p>`,
+        `<p style="font-family: ${fontFamily}; font-weight: 600">0123456789!@#~$%^&*()_+-./</p>`,
+        `<p style="font-family: ${fontFamily}; font-weight: 600">你好，世界</p>`,
+      ].join('')
+
+      var fieldset = document.createElement('fieldset')
+      fieldset.appendChild(legend)
+      fieldset.appendChild(div)
+      document.body.appendChild(fieldset)
+    }
+
+    createFieldset('Eina')
+    createFieldset('Eina03')
+    createFieldset('Bookman Old Style')
+  </script>
+</body>
+
+</html>

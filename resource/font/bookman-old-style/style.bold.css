@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "BookmanOldStyle";
+  font-weight: 600;
+  src: url(bookman-old-style-bold.eot);
+  src: url(bookman-old-style-bold.eot?#iefix) format('embedded-opentype'),url(bookman-old-style-bold.woff2) format('woff2'),url(bookman-old-style-bold.woff) format('woff'),url(bookman-old-style-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Bookman Old Style";
+  font-weight: 600;
+  src: url(bookman-old-style-bold.eot);
+  src: url(bookman-old-style-bold.eot?#iefix) format('embedded-opentype'),url(bookman-old-style-bold.woff2) format('woff2'),url(bookman-old-style-bold.woff) format('woff'),url(bookman-old-style-bold.ttf) format('truetype');
+}
