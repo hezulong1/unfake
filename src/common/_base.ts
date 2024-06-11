@@ -19,7 +19,7 @@ export const isStringNumber = (val: string): boolean => isString(val) ? !Number.
 export const isObject = (val: unknown): val is object =>
   toTypeString(val) === '[object Object]' && val !== null && !Array.isArray(val);
 
-export function isEmptyObject(obj: unknown): obj is object {
+export const isEmptyObject = (obj: unknown): obj is object => {
   if (!isObject(obj)) return false;
 
   for (const key in obj) {
@@ -29,7 +29,7 @@ export function isEmptyObject(obj: unknown): obj is object {
   }
 
   return true;
-}
+};
 
 export const isDate = (val: unknown): val is Date => val instanceof Date;
 export const isFunction = <T extends (...args: any[]) => unknown>(val: unknown): val is T => typeof val === 'function';

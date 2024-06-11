@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import process from 'node:process';
 import { execSync } from 'node:child_process';
 import minimist from 'minimist';
-import { green } from './colors.mjs';
+import { green } from './colors.js';
 
 const args = minimist(process.argv.slice(2));
 const publish = args.publish;

@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { red, yellow } from './colors.mjs';
+import { red, yellow } from './colors.js';
 
 let err = false;
 

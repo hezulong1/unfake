@@ -1,4 +1,5 @@
 import type { Component, PropType } from 'vue';
+
 import { defineComponent, ref, h, computed } from 'vue';
 import { KeyCode } from '@/common/keyboard';
 

@@ -1,7 +1,3 @@
-export interface IDisposable {
-  dispose(): void;
-}
-
 export type Arrayable<T> = T | T[];
 
 export type Mutable<T> = {
