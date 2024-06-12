@@ -5,7 +5,6 @@
 ## 示例
 
 - logo.png: https://cdn.jsdelivr.net/gh/hezulong1/shared/resources/logo.png
-- favicon.ico: https://unpkg.com/h21-resources/favicon.ico
 
 <details>
   <summary>备忘录</summary>
