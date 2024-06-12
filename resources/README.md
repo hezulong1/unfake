@@ -1,12 +1,11 @@
-## resource
+# h21-resources
 
-使用 [jsDelivr](http://www.jsdelivr.com/) 做个静态资源库。
-
+资源库，侵删
 
 ## 示例
 
 - logo.png: https://cdn.jsdelivr.net/gh/hezulong1/shared/resources/logo.png
-- favicon.ico: https://unpkg.com/h21-shared/resources/favicon.ico
+- favicon.ico: https://unpkg.com/h21-resources/favicon.ico
 
 <details>
   <summary>备忘录</summary>

@@ -1,0 +1,17 @@
+{
+  "name": "h21-resources",
+  "version": "0.3.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezulong1/h21-shared.git",
+    "directory": "./resources"
+  },
+  "keywords": [
+    "h21"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
