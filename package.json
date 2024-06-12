@@ -1,19 +1,19 @@
 {
-  "name": "h21-shared",
-  "version": "0.0.0",
+  "name": "undef-h21",
+  "version": "0.0.1",
   "description": "utilities of hezulong1",
   "author": "hezulong1<https://github.com/hezulong1>",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hezulong1/h21-shared.git"
+    "url": "https://github.com/hezulong1/undef-h21.git"
   },
   "bugs": {
-    "url": "https://github.com/hezulong1/h21-shared/issues"
+    "url": "https://github.com/hezulong1/undef-h21/issues"
   },
   "keywords": [
-    "h21"
+    "util"
   ],
   "sideEffects": false,
   "main": "dist/index.cjs.js",
@@ -27,7 +27,6 @@
     },
     "./tsconfig": "./config/tsconfig.base.json",
     "./eslint-rules": "./eslint-rules/index.cjs",
-    "./resources/*": "./resources/*",
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.esm.js",
@@ -38,18 +37,19 @@
     "config",
     "dist",
     "eslint-rules",
-    "resources",
     "src"
   ],
   "engines": {
-    "node": ">=16"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "build": "rollup -c",
     "release": "node ./scripts/release.js",
     "test": "vitest",
     "lint": "eslint .",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "pub": "npm publish --no-git-checks",
+    "unpub": "npm unpublish undef-h21@0.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",

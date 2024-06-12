@@ -17,7 +17,6 @@ const outputs = {
   'base': 'src/common/base.ts',
   'timer': 'src/common/timer.ts',
   // Framework
-  'lit': 'src/lit/index.ts',
   'vue': 'src/vue/index.ts',
 };
 
