@@ -1,5 +1,5 @@
 {
-  "extends": "./config/tsconfig.base.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2018",
     "isolatedModules": true,
@@ -10,7 +10,7 @@
       "DOM.Iterable",
       "WebWorker.ImportScripts"
     ],
-    "outDir": "./dist",
+    "outDir": "./out",
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {

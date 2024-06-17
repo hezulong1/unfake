@@ -2,14 +2,14 @@
   "npm.packageManager": "yarn",
   "search.exclude": {
     "**/dist": true,
-    "**/dist-electron": true,
-    "**/release": true
+    "**/out": true
   },
+  "typescript.tsdk": "node_modules/typescript/lib",
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
-    },
+    }
   }
 }

@@ -1,5 +1,4 @@
-import type { Arrayable } from '@/typings/types';
-import { isObject } from './_base';
+import { isObject } from './base';
 
 /**
  * fork from {@link https://github.com/sindresorhus/escape-string-regexp}
@@ -29,14 +28,14 @@ export function kebabCase(str: string) {
   return str.replace(/\B([A-Z])/g, '-$1').toLowerCase();
 }
 
-export function stringLineify(str: string) {
+export function stringToLines(str: string) {
   return str.split(/\r\n|\r|\n/);
 }
 
 /**
  * @param trim 是否移除空白符，默认 false
  */
-export function stringArrify(str: Arrayable<string>, delimiter: string | RegExp = ',', trim = false) {
+export function stringToArray(str: string | string[], delimiter: string | RegExp = ',', trim = false) {
   let res = Array.isArray(str) ? str : str.split(delimiter);
   if (trim === true) {
     res = res.map(s => s.trim()).filter(s => s);
@@ -113,6 +112,6 @@ export function joinPaths(start: string, end: string) {
 
 export const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i;
 
-export function isExternal(path: string): boolean {
+export function isExternalUrl(path: string): boolean {
   return EXTERNAL_URL_RE.test(path);
 }

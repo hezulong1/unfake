@@ -1,4 +1,4 @@
-import { isString } from './_base';
+import { isString } from './base';
 
 let _isWindows = false;
 let _isMacintosh = false;

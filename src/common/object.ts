@@ -1,4 +1,4 @@
-import { hasOwn } from './_base';
+import { hasOwn } from './base';
 
 /**
  * 为了 TS 更好的提示
@@ -43,7 +43,7 @@ export function objectOmit<T, K extends string | number | symbol, R extends Reco
 /**
  * 将一个 Array-like object 转换成真的 Array
  */
-export function objectArrify<T extends object = any>(list: ArrayLike<T>, start = 0) {
+export function objectToArray<T extends object = any>(list: ArrayLike<T>, start = 0) {
   let i = list.length - start;
   const ret = Array.from({ length: i });
   while (i--) {

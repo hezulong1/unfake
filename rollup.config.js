@@ -12,12 +12,8 @@ const pluginAlias = alias({
 });
 
 const outputs = {
-  'index': 'src/browser/index.ts',
-  'logic': 'src/common/logic/index.ts',
-  'base': 'src/common/base.ts',
-  'timer': 'src/common/timer.ts',
-  // Framework
-  'vue': 'src/vue/index.ts',
+  'shared': 'src/shared.ts',
+  'logic': 'src/logic/index.ts',
 };
 
 const externals = [
@@ -32,8 +28,8 @@ for (const [exportName, dirSrc] of Object.entries(outputs)) {
   configs.push({
     input: resolve(dirSrc),
     output: [
-      { file: `dist/${exportName}.esm.js`, format: 'es' },
-      { file: `dist/${exportName}.cjs.js`, format: 'cjs' },
+      { file: `out/${exportName}.esm.js`, format: 'es' },
+      { file: `out/${exportName}.cjs.js`, format: 'cjs' },
     ],
     external: [
       ...externals,
@@ -45,7 +41,7 @@ for (const [exportName, dirSrc] of Object.entries(outputs)) {
   }, {
     input: dirSrc,
     output: [
-      { file: `dist/${exportName}.d.ts` },
+      { file: `out/${exportName}.d.ts` },
     ],
     external: [
       ...externals,

@@ -16,28 +16,26 @@
     "util"
   ],
   "sideEffects": false,
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "out/shared.cjs.js",
+  "module": "out/shared.esm.js",
+  "types": "out/shared.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "types": "./out/shared.d.ts",
+      "import": "./out/shared.esm.js",
+      "require": "./out/shared.cjs.js"
     },
-    "./tsconfig": "./config/tsconfig.base.json",
-    "./eslint-rules": "./eslint-rules/index.cjs",
     "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.esm.js",
-      "require": "./dist/*.cjs.js"
+      "types": "./out/*.d.ts",
+      "import": "./out/*.esm.js",
+      "require": "./out/*.cjs.js"
     }
   },
   "files": [
-    "config",
-    "dist",
+    "out",
+    "src",
     "eslint-rules",
-    "src"
+    "tsconfig.base.json"
   ],
   "engines": {
     "node": ">=16.0.0"
@@ -49,7 +47,7 @@
     "lint": "eslint .",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "pub": "npm publish --no-git-checks",
-    "unpub": "npm unpublish undef-h21@0.0.0"
+    "unpub": "npm unpublish undef-h21@0.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",
