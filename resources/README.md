@@ -4,7 +4,7 @@
 
 ## 示例
 
-- logo.png: https://cdn.jsdelivr.net/gh/hezulong1/shared/resources/logo.png
+- logo.png: https://cdn.jsdelivr.net/gh/hezulong1/unfake/resources/logo.png
 
 <details>
   <summary>备忘录</summary>
