@@ -1,5 +1,6 @@
 import { css } from 'lit';
-import lightStyles from '../_styles/light';
+import * as light from '../_styles/light';
+import { opacityDisabled } from '../_styles/variables';
 
 const styles = css`
   :host {
@@ -18,9 +19,6 @@ const styles = css`
     --text-color: #fff;
     --text-active-color: #fff;
 
-    --cursor: pointer;
-    --user-select: none;
-
     display: inline-block;
   }
 
@@ -36,7 +34,7 @@ const styles = css`
     border-radius: calc(var(--height) / 2);
     background-color: var(--default-background);
     font-size: var(--text-size);
-    user-select: var(--user-select);
+    user-select: none;
     transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
     box-sizing: border-box;
   }
@@ -62,10 +60,10 @@ const styles = css`
   [pressed] .indicator { transform: scale(.9); }
 
   [checked] { background-color: var(--color-primary); }
-  [checked] .indicator { left: calc(100% - (var(--height) + var(--button-size)) / 2); left: calc(100% - var(--button-offset) - var(--button-size)); }
+  [checked] .indicator { left: calc(100% - var(--button-offset) - var(--button-size)); }
   [checked] .content { --ml: calc(var(--button-offset) * 2 + var(--button-size)); --mr: calc(var(--button-offset) + 4px); color: var(--text-active-color); }
 
-  [disabled] { opacity: var(--opacity-disabled); }
+  [disabled] { opacity: ${opacityDisabled}; }
 
   [focused] { box-shadow: var(--box-shadow-focus); }
   [focused]:focus-visible::after { content: ""; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 1px solid transparent; border-radius: inherit; animation: focus-in .6s forwards; }
@@ -73,4 +71,4 @@ const styles = css`
   ::slotted(*) { pointer-events: none; }
 `;
 
-export default [lightStyles, styles];
+export default [light.focusIn, light.global, styles];

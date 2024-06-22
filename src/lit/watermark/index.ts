@@ -1,7 +1,5 @@
-import { LitElement, html } from 'lit';
+import { LitElement, css, html } from 'lit';
 import { property, state } from 'lit/decorators.js';
-import { isStringNumber } from '@/shared';
-import styles from './styles';
 
 const getPixelRatio = (context: CanvasRenderingContext2D) => {
   if (!context) return 1;
@@ -18,7 +16,11 @@ const getPixelRatio = (context: CanvasRenderingContext2D) => {
 };
 
 export class Watermark extends LitElement {
-  static override styles = styles;
+  static override styles = css`
+    :host { position: relative; display: block; }
+    :host([full]) { height: 100%; }
+    [marker] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+  `;
 
   @property({ type: Number }) width = 120;
   @property({ type: Number }) height = 64;
@@ -53,11 +55,7 @@ export class Watermark extends LitElement {
     attribute: 'font-weight',
     converter: v => v && (['normal', 'light', 'weight'].includes(v) || !Number.isNaN(Number.parseInt(v))) ? v : 'normal',
   }) fontWeight: 'normal' | 'light' | 'weight' | number = 'normal';
-  @property({
-    type: Number,
-    attribute: 'font-size',
-    converter: v => v && isStringNumber(v) ? Number.parseFloat(v) : 16,
-  }) fontSize = 16;
+  @property({ type: Number, attribute: 'font-size' }) fontSize = 16;
 
   @state() private _base64Url = '';
 
