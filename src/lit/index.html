@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: auto;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit App</title>
+    <!-- <script type="importmap">
+      {
+        "imports": {}
+      }
+    </script> -->
+  </head>
+  <body style="margin: 0;">
+    <un-watermark style="margin: 20px; width:480px; height:300px; background: #74d0e3;" content="unfake">
+      <un-loading></un-loading>
+
+      <un-toggle checked>
+        <ion-icon name="checkmark-outline" slot="checked"></ion-icon>
+        <ion-icon name="close-outline" slot="unchecked"></ion-icon>
+      </un-toggle>
+
+      <un-toggle checked-text="开" unchecked-text="关"></un-toggle>
+
+      <un-auto-resizer>
+        <div style="width: 200px; height: 32px; background: red;"></div>
+      </un-auto-resizer>
+    </un-watermark>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="/demo.ts"></script>
+  </body>
+</html>
