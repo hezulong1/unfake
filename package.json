@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "dev-lit": "vite serve src/lit",
     "build": "rollup -c",
     "release": "node ./scripts/release.js",
     "test": "vitest",
@@ -55,6 +56,8 @@
     "esbuild": "^0.18.10",
     "eslint": "^8.48.0",
     "eslint-config-h21": "^0.15.0",
+    "eslint-plugin-lit": "^1.14.0",
+    "lit": "^3.1.4",
     "minimist": "^1.2.8",
     "rollup": "^3.27.1",
     "rollup-plugin-dts": "^6.0.1",

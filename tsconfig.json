@@ -16,8 +16,11 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ],
-    }
+      ]
+    },
+    // for lit
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
   },
   "include": [
     "src"
