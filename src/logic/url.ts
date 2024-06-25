@@ -23,3 +23,16 @@ export function getUrlParamByName(name: string, search = location.href) {
     ? decodeURIComponent(ar[1].replace(/\+/g, '%20'))
     : null;
 }
+
+/**
+ * @example
+ * objectToUrl({ name:'jack', sex:undefined, score:0, age: 18, like: [] })
+ * // name=jack&score=0&age=18&like=
+ */
+export function objectToUrl(obj: Record<string, any>) {
+  const arr = Object.keys(obj).map((key) => {
+    if (obj[key] == null) return '';
+    return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+  }).filter(Boolean);
+  return arr.join('&');
+}
