@@ -1,6 +1,7 @@
 import type { AnyFn, ConfigurableWindow } from '@vueuse/core';
-import { useEventListener, tryOnScopeDispose, defaultWindow } from '@vueuse/core';
+
 import { computed, readonly, ref } from 'vue';
+import { useEventListener, tryOnScopeDispose, defaultWindow } from '@vueuse/core';
 
 export interface IOnMoveCallback {
   (event: PointerEvent): void;
