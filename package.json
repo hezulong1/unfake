@@ -16,17 +16,16 @@
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",
-    "@vueuse/core": "^10.10.0",
-    "conventional-changelog-cli": "^4.0.0",
-    "esbuild": "^0.18.10",
-    "eslint": "^8.48.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "esbuild": "^0.25.1",
+    "eslint": "^8.57.1",
     "eslint-config-h21": "^0.16.0",
-    "eslint-plugin-lit": "^1.14.0",
+    "eslint-plugin-lit": "^1.15.0",
     "minimist": "^1.2.8",
-    "rollup": "^3.27.1",
-    "rollup-plugin-dts": "^6.0.1",
-    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup": "^4.35.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.2.1",
     "typescript": "^5.8.2",
-    "vite": "^6.2.1"
+    "vite": "^6.2.2"
   }
 }

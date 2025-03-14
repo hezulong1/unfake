@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FlexibleScreen from '@local/vue/components/FlexibleScreen.vue';
+import FlexibleScreen from '@/components/FlexibleScreen.vue';
 </script>
 
 <template>
