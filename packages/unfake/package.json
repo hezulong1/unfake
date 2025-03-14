@@ -1,0 +1,36 @@
+{
+  "name": "unfake",
+  "version": "0.1.0",
+  "description": "utilities of hezulong1",
+  "author": "hezulong1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.esm.js",
+      "require": "./dist/*.cjs.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "bugs": "https://github.com/hezulong1/unfake/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezulong1/unfake.git",
+    "directory": "packages/unfake"
+  },
+  "keywords": [
+    "unfake"
+  ]
+}

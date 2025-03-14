@@ -1,0 +1,51 @@
+{
+  "name": "@unfake/vue",
+  "version": "0.0.0",
+  "description": "utilities of hezulong1",
+  "author": "hezulong1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "bugs": "https://github.com/hezulong1/unfake/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezulong1/unfake.git",
+    "directory": "packages/unfake-vue"
+  },
+  "keywords": [
+    "unfake"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "^10.0.0",
+    "vue": "^3.2.0"
+  }
+}

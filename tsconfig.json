@@ -5,7 +5,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
-      "ES2022",
+      "ES2024",
       "DOM",
       "DOM.Iterable",
       "WebWorker.ImportScripts"
@@ -23,6 +23,7 @@
     "useDefineForClassFields": false,
   },
   "include": [
-    "src"
+    "src",
+    "packages"
   ]
 }

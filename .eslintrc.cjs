@@ -19,6 +19,7 @@ module.exports = {
   ],
   rules: {
     'no-restricted-imports': [2, { paths: restricted }],
+    'unicorn/no-for-loop': 0,
     'import/order': [2, {
       groups: ['type', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
       pathGroups: [
