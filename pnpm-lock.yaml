@@ -61,6 +61,10 @@ importers:
         version: 6.2.2
 
   packages/unfake-vue:
+    dependencies:
+      unfake:
+        specifier: 'workspace: *'
+        version: link:../unfake
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.1

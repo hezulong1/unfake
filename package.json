@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev-lit": "vite serve src/lit",
+    "dev-vue": "vite serve packages/unfake-vue",
     "build": "rollup -c",
     "release": "node ./scripts/release.js",
     "test": "vitest",

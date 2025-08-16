@@ -48,5 +48,8 @@
   "peerDependencies": {
     "@vueuse/core": "^13.0.0",
     "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "unfake": "workspace: *"
   }
 }
