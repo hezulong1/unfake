@@ -1,27 +1,31 @@
 @font-face {
-  font-family: "BookmanOldStyle";
-  font-weight: 600;
-  src: url(bookman-old-style-bold.eot);
-  src: url(bookman-old-style-bold.eot?#iefix) format('embedded-opentype'),url(bookman-old-style-bold.woff2) format('woff2'),url(bookman-old-style-bold.woff) format('woff'),url(bookman-old-style-bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: "BookmanOldStyle";
+  font-family: 'Bookman Old Style';
+  src: url(BookmanOldStyle.woff2) format('woff2');
   font-weight: 400;
-  src: url(bookman-old-style.eot);
-  src: url(bookman-old-style.eot?#iefix) format('embedded-opentype'),url(bookman-old-style.woff2) format('woff2'),url(bookman-old-style.woff) format('woff'),url(bookman-old-style.ttf) format('truetype');
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Bookman Old Style";
-  font-weight: 600;
-  src: url(bookman-old-style-bold.eot);
-  src: url(bookman-old-style-bold.eot?#iefix) format('embedded-opentype'),url(bookman-old-style-bold.woff2) format('woff2'),url(bookman-old-style-bold.woff) format('woff'),url(bookman-old-style-bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: "Bookman Old Style";
+  font-family: 'Bookman Old Style';
+  src: url(BookmanOldStyle-Italic.woff2) format('woff2');
   font-weight: 400;
-  src: url(bookman-old-style.eot);
-  src: url(bookman-old-style.eot?#iefix) format('embedded-opentype'),url(bookman-old-style.woff2) format('woff2'),url(bookman-old-style.woff) format('woff'),url(bookman-old-style.ttf) format('truetype');
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookman Old Style';
+  src: url(BookmanOldStyle-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookman Old Style';
+  src: url(BookmanOldStyle-BoldItalic.woff2) format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }

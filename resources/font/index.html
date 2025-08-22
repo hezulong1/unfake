@@ -4,72 +4,178 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>字体</title>
+  <title>字体预览 Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="Eina/style.css">
-  <link rel="stylesheet" href="Eina03/style.css">
-  <link rel="stylesheet" href="BookmanOldStyle/style.css">
+  <link rel="stylesheet" href="eina/style.css">
+  <link rel="stylesheet" href="bookman-old-style/style.css">
+  <link rel="stylesheet" href="soehne-mono/style.css">
   <link rel="icon" href="https://hezulong1.github.io/logo.png" type="image/png">
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 24px;
+      background: #f8f8fa;
+      font-family: Arial, sans-serif;
     }
 
-    body:after {
-      content: "";
-      display: table;
-      clear: both;
+    .font-demo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
     }
 
     fieldset {
-      float: left;
-      height: 40vh;
-      margin: 0 0 20px 20px;
-      padding: 12px;
+      min-width: 320px;
+      flex: 1 1 320px;
+      margin: 0;
+      padding: 16px;
       border: 1px solid #222;
+      background: #fff;
+      box-shadow: 0 2px 8px #0001;
       box-sizing: border-box;
+      transition: box-shadow 0.2s;
     }
 
-    p {
-      line-height: 1.8;
-      margin-top: 0;
-      margin-bottom: 5px;
+    legend {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 0 8px;
     }
 
-    .news {
-      font-family: "BookmanOldStyle", 'STSong','SimSun','MingLiU','宋体', serif;
+    .font-desc {
+      color: #666;
+      font-size: 0.95em;
+      margin-bottom: 12px;
+    }
+
+    .font-preview {
+      margin-bottom: 8px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      word-break: break-all;
+    }
+
+    .font-preview:last-child {
+      border-bottom: none;
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    @media (max-width: 1100px) {
+      .font-demo-container {
+        gap: 16px;
+      }
+      fieldset {
+        min-width: 260px;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 8px;
+      }
+      .font-demo-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+      fieldset {
+        min-width: 0;
+        width: 100%;
+        padding: 8px;
+      }
+      legend {
+        font-size: 1em;
+      }
+      .font-desc {
+        font-size: 0.9em;
+      }
+      .font-preview {
+        font-size: 1em;
+        padding: 4px 0;
+      }
     }
   </style>
 </head>
 
 <body>
+  <h1>字体预览 Demo</h1>
+  <label style="display:inline-block;margin-bottom:16px;">
+    <input type="checkbox" id="italicSwitch" />
+    斜体预览
+  </label>
+  <div class="font-demo-container" id="fontDemo"></div>
   <script>
-    function createFieldset(fontFamily, className) {
-      var legend = document.createElement('legend')
-      legend.innerHTML = fontFamily
-      
-      var div = document.createElement('div')
-      div.innerHTML = [
-        `<p style="font-family: ${fontFamily}">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>`,
-        `<p style="font-family: ${fontFamily}">abcdefghijklmnopqrstuvwxyz</p>`,
-        `<p style="font-family: ${fontFamily}">0123456789!@#~$%^&*()_+-./</p>`,
-        `<p style="font-family: ${fontFamily}">你好，世界</p>`,
-        `<p style="font-family: ${fontFamily}; font-weight: 600">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>`,
-        `<p style="font-family: ${fontFamily}; font-weight: 600">abcdefghijklmnopqrstuvwxyz</p>`,
-        `<p style="font-family: ${fontFamily}; font-weight: 600">0123456789!@#~$%^&*()_+-./</p>`,
-        `<p style="font-family: ${fontFamily}; font-weight: 600">你好，世界</p>`,
-      ].join('')
+    const fonts = [{
+        name: 'Eina',
+        family: 'Eina',
+        desc: '现代无衬线字体，适合标题和正文。',
+      },
+      {
+        name: 'Bookman Old Style',
+        family: 'Bookman Old Style',
+        desc: '经典衬线字体，适合正式场合。',
+      },
+      {
+        name: 'Söhne Mono',
+        family: 'Söhne Mono',
+        desc: 'Söhne Mono，现代等宽字体，适合代码和技术文档。',
+      }
+    ];
 
-      var fieldset = document.createElement('fieldset')
-      fieldset.appendChild(legend)
-      fieldset.appendChild(div)
-      document.body.appendChild(fieldset)
+    function createFieldset(font, italic = false) {
+      const fieldset = document.createElement('fieldset');
+      const legend = document.createElement('legend');
+      legend.textContent = font.name;
+      fieldset.appendChild(legend);
+
+      const desc = document.createElement('div');
+      desc.className = 'font-desc';
+      desc.textContent = font.desc;
+      fieldset.appendChild(desc);
+
+      const previews = [
+        {
+          label: 'Regular',
+          class: 'regular'
+        },
+        {
+          label: 'Bold',
+          class: 'bold'
+        }
+      ];
+
+      previews.forEach(preview => {
+        ['ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz', '0123456789!@#~$%^&*()_+-./', '你好，世界'].forEach(text => {
+          const p = document.createElement('div');
+          p.className = `font-preview ${preview.class}`;
+          p.style.fontFamily = font.family;
+          p.style.fontSize = '1.3em';
+          p.style.fontStyle = italic ? 'italic' : 'normal';
+          p.innerHTML = `<span style="color:#888;font-size:0.9em;">${preview.label}：</span> ${text}`;
+          fieldset.appendChild(p);
+        });
+      });
+
+      document.getElementById('fontDemo').appendChild(fieldset);
     }
 
-    createFieldset('Eina')
-    createFieldset('Eina03')
-    createFieldset('Bookman Old Style')
+    function renderDemo() {
+      const italic = document.getElementById('italicSwitch').checked;
+      const container = document.getElementById('fontDemo');
+      container.innerHTML = '';
+      fonts.forEach(font => createFieldset(font, italic));
+    }
+
+    document.getElementById('italicSwitch').addEventListener('change', renderDemo);
+
+    renderDemo();
   </script>
 </body>
 
