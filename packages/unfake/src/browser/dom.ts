@@ -1,4 +1,4 @@
-import { toTypeString } from '@/common/base';
+import { toTypeString } from '../base';
 
 export function domReady(condition: DocumentReadyState[] = ['complete', 'interactive']) {
   return new Promise((resolve) => {
@@ -34,21 +34,25 @@ export function getDomNodePagePosition(domNode: HTMLElement): IDomNodePagePositi
   };
 }
 
-export function getWindow(element: Node): Window;
-export function getWindow(event: UIEvent): Window;
-export function getWindow(obj: unknown): Window;
-export function getWindow(e: unknown): Window {
-  const candidateNode = e as Node | undefined;
+export function getWindow(e?: Node | UIEvent | null): Window & typeof globalThis {
+  const candidateNode = e as Node | undefined | null;
   if (candidateNode?.ownerDocument?.defaultView) {
     return candidateNode.ownerDocument.defaultView.window;
   }
 
-  const candidateEvent = e as UIEvent | undefined;
+  const candidateEvent = e as UIEvent | undefined | null;
   if (candidateEvent?.view) {
     return candidateEvent.view.window;
   }
 
   return window;
+}
+
+export function getComputedStyle(element: Element): CSSStyleDeclaration;
+export function getComputedStyle<P extends keyof CSSStyleDeclaration>(element: Element, property: P): CSSStyleDeclaration[P];
+export function getComputedStyle(element: Element, property?: keyof CSSStyleDeclaration) {
+  const style = getWindow(element).getComputedStyle(element, null);
+  return property ? style[property] : style;
 }
 
 export function getActiveElement() {

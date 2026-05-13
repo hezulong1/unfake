@@ -1,0 +1,12 @@
+{
+  "Draw a long line": {
+    "prefix": "/-",
+    "body": [
+      "// $1",
+      "// ----------------------------------------",
+      "",
+      "$2"
+    ],
+    "description": "Draw a long line to divide the blocks"
+  }
+}

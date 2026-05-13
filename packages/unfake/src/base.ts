@@ -1,7 +1,6 @@
 const _hasOwn = Object.prototype.hasOwnProperty;
 export const hasOwn = (val: object, key: string | symbol): key is keyof typeof val => _hasOwn.call(val, key);
 export const toTypeString = (val: any) => Object.prototype.toString.call(val);
-export const noop = () => { /* nothing */ };
 
 export const isBoolean = (val: unknown): val is boolean => val === true || val === false;
 export const isString = (val: unknown): val is string => typeof val === 'string';
@@ -19,6 +18,7 @@ export const isUndefined = (val: unknown): val is undefined => val === void 0;
 export const isUndefinedOrNull = (val: unknown): val is undefined | null => isUndefined(val) || val === null;
 export const isDefined = <T>(val: T | undefined | null): val is T => !isUndefinedOrNull(val);
 
+export const isNumeric = (val: string): boolean => typeof val === 'string' ? !Number.isNaN(Number(val)) : false;
 export function isSafeNumber(val: unknown): val is number {
   return isNumber(val) && val <= Number.MAX_SAFE_INTEGER && val >= Number.MIN_SAFE_INTEGER;
 }

@@ -1,4 +1,4 @@
-import { isUndefinedOrNull, toTypeString } from '@/common/base';
+import { isUndefinedOrNull, toTypeString } from '../base';
 
 /**
  * 支持类型 [

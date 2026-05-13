@@ -1,23 +1,32 @@
 const digit = (number: number, length = 2) => `${number}`.padStart(length, '0');
 
 /**
- * @description 简易版格式化时间：
- *  yyyy 年
- *  MM 月
- *  dd 日
- *  HH 时
- *  mm 分
- *  ss 秒
- *
- * @param { string | number | Date } time 时间，缺省则为当前时间
- * @param { string } format 格式，缺省则为 yyyy-MM-dd HH:mm:ss
+ * @description yyyy 年 MM 月 dd 日 HH 时 mm 分 ss 秒
  *
  * @example
  * toDateString() => 2020-03-05 11:46:22
- * toDateString('2020-03-05 11:46:22', 'yyyy-MM-dd') => 2020-03-05
  */
 export function toDateString(): string;
+
+/**
+ * @description yyyy 年 MM 月 dd 日 HH 时 mm 分 ss 秒
+ *
+ * @param time 时间，缺省则为当前时间
+ *
+ * @example
+ * toDateString('2020-03-05 11:46:22') => 2020-03-05 11:46:22
+ */
 export function toDateString(time: string | number | Date): string;
+
+/**
+ * @description yyyy 年 MM 月 dd 日 HH 时 mm 分 ss 秒
+ *
+ * @param time 时间，缺省则为当前时间
+ * @param format 格式，缺省则为 yyyy-MM-dd HH:mm:ss
+ *
+ * @example
+ * toDateString('2020-03-05 11:46:22', 'yyyy-MM-dd') => 2020-03-05
+ */
 export function toDateString(time: string | number | Date, format: string): string;
 export function toDateString(time: any = new Date(), format = 'yyyy-MM-dd HH:mm:ss'): string {
   time = typeof time === 'string' ? time.replace(/-/g, '/') : time;

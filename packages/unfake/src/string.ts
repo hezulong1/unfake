@@ -24,8 +24,9 @@ export function capitalize<T extends string>(str: T) {
   return <Capitalize<T>>(str.charAt(0).toUpperCase() + str.slice(1));
 }
 
-export function kebabCase(str: string) {
-  return str.replace(/\B([A-Z])/g, '-$1').toLowerCase();
+const kebabRE = /\B([A-Z])/g;
+export function kebab(str: string) {
+  return str.replace(kebabRE, '-$1').toLowerCase();
 }
 
 export function stringToLines(str: string) {

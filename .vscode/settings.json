@@ -1,10 +1,9 @@
 {
-  "npm.packageManager": "yarn",
   "search.exclude": {
     "**/dist": true,
     "**/out": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar",
     "editor.codeActionsOnSave": {

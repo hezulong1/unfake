@@ -1,4 +1,4 @@
-import { isKeyof } from '@/common/object';
+import { isKeyof } from '../object';
 
 const Alias = {
   aliceblue: '#f0f8ff',

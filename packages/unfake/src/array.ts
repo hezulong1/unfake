@@ -1,5 +1,8 @@
-export function toArray<T>(target: T | T[]): T[] {
-  return Array.isArray(target) ? target : [target];
+import type { Arrayable } from './typingUtils';
+
+export function ensureArray<T>(arr?: Arrayable<T> | null): T[] {
+  if (!arr && (arr as any) !== 0) return [];
+  return Array.isArray(arr) ? arr : [arr as T];
 }
 
 export function unique<T>(arr: T[]): T[] {
