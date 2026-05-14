@@ -44,7 +44,7 @@ test('logic/copy.ts', () => {
   const copyBigInt = copy(BIGINT_ZERO);
   expect(typeof copyBigInt).toEqual('bigint');
   expect(copyBigInt).toStrictEqual(BIGINT_ZERO);
-  expect(`${copyBigInt}`).toBe('0');
+  expect(`${ copyBigInt }`).toBe('0');
 
   const testArray = (array: number[]) => {
     const copyArray = copy(array);

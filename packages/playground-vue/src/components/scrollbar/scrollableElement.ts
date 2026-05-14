@@ -497,7 +497,7 @@ export function useScrollableElement(opts: UseScrollableElementOptions, emit: Se
 
       leftShadowClassName.value = leftClassName;
       topShadowClassName.value = topClassName;
-      topLeftShadowClassName.value = `${topLeftClassName}${topClassName}${leftClassName}`;
+      topLeftShadowClassName.value = `${ topLeftClassName }${ topClassName }${ leftClassName }`;
     }
   }
 

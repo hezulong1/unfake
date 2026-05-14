@@ -19,20 +19,20 @@ export class Toggle extends LitElement {
   override render() {
     return html`
       <button
-        tabindex=${this.disabled ? -1 : 0}
-        ?disabled=${this.disabled}
-        ?focused=${this._focused}
-        ?pressed=${this._pressed}
-        ?checked=${this.checked}
-        ?loading=${this.loading}
-        @click=${this.handleToggleValue}
-        @focus=${this._handleFocus}
-        @blur=${this._handleBlur}
-        @keyup=${this._handleKeyup}
-        @keydown=${this._handleKeydown}
+        tabindex=${ this.disabled ? -1 : 0 }
+        ?disabled=${ this.disabled }
+        ?focused=${ this._focused }
+        ?pressed=${ this._pressed }
+        ?checked=${ this.checked }
+        ?loading=${ this.loading }
+        @click=${ this.handleToggleValue }
+        @focus=${ this._handleFocus }
+        @blur=${ this._handleBlur }
+        @keyup=${ this._handleKeyup }
+        @keydown=${ this._handleKeydown }
       >
-        <div class="indicator">${when(this.loading, () => html`<slot name="loading"></slot>`)}</div>
-        <div class="content">${when(this.checked, () => html`<slot name="checked">${this.checkedText}</slot>`, () => html`<slot name="unchecked">${this.uncheckedText}</slot>`)}</div>
+        <div class="indicator">${ when(this.loading, () => html`<slot name="loading"></slot>`) }</div>
+        <div class="content">${ when(this.checked, () => html`<slot name="checked">${ this.checkedText }</slot>`, () => html`<slot name="unchecked">${ this.uncheckedText }</slot>`) }</div>
       </button>
     `;
   }

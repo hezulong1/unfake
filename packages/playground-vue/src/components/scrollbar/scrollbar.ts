@@ -108,8 +108,8 @@ export function useScrollbar(opts: UseScrollbarOptions, emit: SetupContext<UseSc
   const pointerMoveMonitor = usePointerMove();
   const visibilityController = useScrollbarVisibilityController(
     opts.visibility,
-    `visible scrollbar ${opts.extraScrollbarClassName}`,
-    `invisible scrollbar ${opts.extraScrollbarClassName}`,
+    `visible scrollbar ${ opts.extraScrollbarClassName }`,
+    `invisible scrollbar ${ opts.extraScrollbarClassName }`,
   );
 
   const { scrollbarState, scrollable } = opts;

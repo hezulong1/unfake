@@ -63,7 +63,7 @@ const styles = css`
   [checked] .indicator { left: calc(100% - var(--button-offset) - var(--button-size)); }
   [checked] .content { --ml: calc(var(--button-offset) * 2 + var(--button-size)); --mr: calc(var(--button-offset) + 4px); color: var(--text-active-color); }
 
-  [disabled] { opacity: ${opacityDisabled}; }
+  [disabled] { opacity: ${ opacityDisabled }; }
 
   [focused] { box-shadow: var(--box-shadow-focus); }
   [focused]:focus-visible::after { content: ""; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 1px solid transparent; border-radius: inherit; animation: focus-in .6s forwards; }

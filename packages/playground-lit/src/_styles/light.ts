@@ -5,8 +5,8 @@ const to = css`rgba(164, 76, 246, 0.6)`;
 
 export const focusIn = css`
   @keyframes focus-in {
-    0% { border-color: ${from}; box-shadow: 0 0 20px ${from}; }
-    100% { border-color: ${to}; box-shadow: 0 0 4px ${to}; }
+    0% { border-color: ${ from }; box-shadow: 0 0 20px ${ from }; }
+    100% { border-color: ${ to }; box-shadow: 0 0 4px ${ to }; }
   }
 `;
 

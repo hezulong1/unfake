@@ -108,8 +108,6 @@ export function createNanoEvents<Events extends EventsMap = DefaultEvents>(): Em
   };
 }
 
-
-
 export interface EmitterEvent<T> {
   (listener: (e: T) => any, thisArgs?: any): IDisposable;
 }

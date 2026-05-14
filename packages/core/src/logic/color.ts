@@ -198,8 +198,8 @@ export function hexToRgba(color: string, alpha = 1) {
   alpha = Number(alpha);
 
   return (alpha >= 1 || alpha < 0)
-    ? `rgb(${Math.round(red)}, ${Math.round(green)}, ${Math.round(blue)})`
-    : `rgba(${Math.round(red)}, ${Math.round(green)}, ${Math.round(blue)}, ${alpha})`;
+    ? `rgb(${ Math.round(red) }, ${ Math.round(green) }, ${ Math.round(blue) })`
+    : `rgba(${ Math.round(red) }, ${ Math.round(green) }, ${ Math.round(blue) }, ${ alpha })`;
 }
 
 /**

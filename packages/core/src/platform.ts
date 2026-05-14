@@ -37,12 +37,11 @@ if (typeof nodeProcess === 'object') {
   _isMacintosh = (nodeProcess.platform === 'darwin');
   _isLinux = (nodeProcess.platform === 'linux');
 } else if (typeof navigator === 'object') {
-  const _userAgent = navigator.userAgent;
+  _userAgent = navigator.userAgent;
   _isWindows = _userAgent.indexOf('Windows') >= 0;
   _isMacintosh = _userAgent.indexOf('Macintosh') >= 0;
   _isLinux = _userAgent.indexOf('Linux') >= 0;
   _isIOS = (_userAgent.indexOf('Macintosh') >= 0 || _userAgent.indexOf('iPad') >= 0 || _userAgent.indexOf('iPhone') >= 0) && Boolean(navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
-  _isLinux = _userAgent.indexOf('Linux') >= 0;
   _isMobile = _userAgent.indexOf('Mobi') >= 0;
 } else {
   console.error('Unable to resolve platform.');

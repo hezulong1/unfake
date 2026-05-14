@@ -14,7 +14,8 @@ export default {
    */
   create(context) {
     function verify(source) {
-      if (!source.value?.startsWith('dayjs/esm')) return;
+      if (!source) return;
+      if (!source.value.startsWith('dayjs/esm')) return;
 
       const removedToken = '/esm';
       const beginLength = 'dayjs'.length;

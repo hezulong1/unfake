@@ -17,7 +17,7 @@ export function getUrlParams(search = location.href) {
  * @returns 返回值已经被 `decodeURIComponent` 处理过
  */
 export function getUrlParamByName(name: string, search = location.href) {
-  const rx = new RegExp(`[?|&]${name}=([^&;]+?)(&|#|;|$)`);
+  const rx = new RegExp(`[?|&]${ name }=([^&;]+?)(&|#|;|$)`);
   const ar = rx.exec(search);
   return (ar && ar.length > 1)
     ? decodeURIComponent(ar[1].replace(/\+/g, '%20'))

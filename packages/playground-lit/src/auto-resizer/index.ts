@@ -104,7 +104,7 @@ export class AutoResizer extends LitElement {
 
   override render() {
     return html`
-      <slot @slotchange=${this.registerObserver}></slot>
+      <slot @slotchange=${ this.registerObserver }></slot>
     `;
   }
 }

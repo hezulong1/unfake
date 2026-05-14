@@ -3,7 +3,7 @@ import { add, div, mul, sub } from './math';
 
 const n1 = 14;
 const n2 = 0.1;
-const n3 = 0.400001;
+const n3 = 0.400_001;
 const n4 = 0.02;
 
 describe('logic/math.ts', () => {
@@ -35,7 +35,7 @@ describe('logic/math.ts', () => {
   });
 
   test('div', () => {
-    expect(div(n3, n4)).toBe(20.00005);
+    expect(div(n3, n4)).toBe(20.000_05);
     expect(div(n3, n4)).not.toEqual(n3 / n4);
     expect(div(n3, 0)).toBe(Number.POSITIVE_INFINITY);
     expect(div(0, 0)).toBe(Number.NaN);

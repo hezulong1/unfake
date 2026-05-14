@@ -172,6 +172,6 @@ defineExpose<ScrollbarInstance>({
       </ScrollbarArrow>
     </template>
 
-    <div class="slider" :class="{ active: sliderActive }" :style="sliderStyle" @click="onSliderClick" @pointerdown="onSliderPointerDown" />
+    <div aria-hidden class="slider" :class="{ active: sliderActive }" :style="sliderStyle" @click="onSliderClick" @pointerdown="onSliderPointerDown" />
   </div>
 </template>

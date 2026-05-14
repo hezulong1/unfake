@@ -17,7 +17,7 @@ describe('logic/toDateString.ts', () => {
   test('invalid formats', () => {
     const date = new Date(2020, 1, 2, 3, 4, 5, 6);
     const r = toDateString(date, 'YYYY/MM');
-    const errMsg = `value is not '2020/02'，is ${r}`;
+    const errMsg = `value is not '2020/02'，is ${ r }`;
 
     function WrapperDo() {
       if (r !== '2020/02') throw new Error(errMsg);

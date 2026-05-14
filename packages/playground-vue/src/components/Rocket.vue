@@ -14,7 +14,7 @@ defineProps<{
     <div class="Rocket__antenna" />
     <div class="Rocket__body" />
     <div class="Rocket__window" :class="{ 'has-gloss': !img }">
-      <img v-if="img" :src="img">
+      <img v-if="img" :src="img" alt="window picture">
     </div>
     <div class="Rocket__fins" />
     <div class="Rocket__pipe" />

@@ -1,4 +1,4 @@
-const digit = (number: number, length = 2) => `${number}`.padStart(length, '0');
+const digit = (number: number, length = 2) => `${ number }`.padStart(length, '0');
 
 /**
  * @description yyyy 年 MM 月 dd 日 HH 时 mm 分 ss 秒

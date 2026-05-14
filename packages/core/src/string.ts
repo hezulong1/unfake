@@ -49,7 +49,7 @@ export function slash(str: string) {
 }
 
 export function truncate(value: string, maxLength: number, suffix = '…') {
-  return value.length <= maxLength ? value : `${value.slice(0, Math.max(0, maxLength))}${suffix}`;
+  return value.length <= maxLength ? value : `${ value.slice(0, Math.max(0, maxLength)) }${ suffix }`;
 }
 
 export function ensurePrefix(prefix: string, str: string) {
@@ -107,7 +107,7 @@ export function format(template: string, ...args: any[]): string {
 
 export function joinPaths(start: string, end: string) {
   start = start.endsWith('/') ? start.slice(0, -1) : start;
-  end = end.startsWith('/') ? end : `/${end}`;
+  end = end.startsWith('/') ? end : `/${ end }`;
   return start + end;
 }
 

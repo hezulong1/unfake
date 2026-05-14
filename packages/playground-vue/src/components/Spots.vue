@@ -25,12 +25,12 @@ function getItem(index: number, length: number) {
   const left = base * (index + 1);
   const style: CSSProperties = {
     background: color,
-    width: `${size}px`,
-    height: `${size}px`,
-    marginTop: `-${size / 2}px`,
-    marginLeft: `-${size / 2}px`,
-    top: `${Math.random() * 100}%`,
-    left: `${left - (base / 2)}%`,
+    width: `${ size }px`,
+    height: `${ size }px`,
+    marginTop: `-${ size / 2 }px`,
+    marginLeft: `-${ size / 2 }px`,
+    top: `${ Math.random() * 100 }%`,
+    left: `${ left - (base / 2) }%`,
   };
 
   return style;
