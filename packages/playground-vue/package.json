@@ -1,0 +1,24 @@
+{
+  "name": "playground-vue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "format": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:dev",
+    "@vitejs/plugin-vue-jsx": "catalog:dev",
+    "eslint-plugin-unfake": "workspace: *",
+    "eslint-plugin-vue": "^10.9.1",
+    "eslint-plugin-vuejs-accessibility": "^2.5.0",
+    "vite": "catalog:dev",
+    "vue-eslint-parser": "^10.4.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "catalog:prod",
+    "unfake": "workspace: *",
+    "vue": "catalog:prod",
+    "vue-router": "catalog:prod"
+  }
+}

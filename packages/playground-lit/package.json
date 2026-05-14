@@ -1,0 +1,16 @@
+{
+  "name": "playground-lit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3333",
+    "format": "eslint . --fix"
+  },
+  "dependencies": {
+    "lit": "catalog:prod"
+  },
+  "devDependencies": {
+    "eslint-plugin-lit": "^2.3.1",
+    "eslint-plugin-wc": "^3.1.0"
+  }
+}

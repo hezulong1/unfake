@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playground React</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <div id="root">
+      <style>
+        @keyframes r2 {
+          100% { transform: rotate(360deg) }
+        }
+
+        @keyframes r2s1 {
+          0% { transform: translate(0, 0) }
+          25% { transform: translate(0, 18px)}
+          50% { transform: translate(18px, 18px) }
+          75% { transform: translate(18px, 0) }
+        }
+
+        @keyframes r2s2 {
+          0% { transform: translate(0, 0) }
+          25% { transform: translate(-18px, 0) }
+          50% { transform: translate(-18px, 18px) }
+          75% { transform: translate(0, 18px) }
+        }
+
+        @keyframes r2s3 {
+          0% { transform: translate(0, 0) }
+          25% { transform: translate(18px, 0) }
+          50% { transform: translate(18px, -18px) }
+          75% { transform: translate(0, -18px) }
+        }
+
+        @keyframes r2s4 {
+          0% { transform: translate(0, 0) }
+          25% { transform: translate(0, -18px) }
+          50% { transform: translate(-18px, -18px) }
+          75% { transform: translate(-18px, 0) }
+        }
+
+        .loading {
+          position: absolute;
+          inset: 0;
+          display: grid;
+          place-items: center;
+          place-content: center;
+        }
+
+        .shapes {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          animation: r2 1s infinite;
+        }
+
+        .shape {
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+
+          &:nth-of-type(1) {
+            left: 0;
+            background-color: #5c6bc0;
+            background-color: #1d84e0;
+            animation: r2s1 2s linear infinite;
+          }
+
+          &:nth-of-type(2) {
+            right: 0;
+            background-color: #8bc34a;
+            background-color: #09c6cd;
+            animation: r2s2 2s linear infinite;
+          }
+
+          &:nth-of-type(3) {
+            bottom: 0;
+            background-color: #ffb74d;
+            background-color: #09c6cd;
+            animation: r2s3 2s linear infinite;
+          }
+
+          &:nth-of-type(4) {
+            bottom: 0;
+            right: 0;
+            background-color: #f44336;
+            background-color: #1d84e0;
+            animation: r2s4 2s linear infinite;
+          }
+        }
+      </style>
+
+      <div class="loading">
+        <div class="shapes">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+      </div>
+    </div>
+    <div id="portal-container"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
