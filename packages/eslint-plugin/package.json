@@ -1,0 +1,10 @@
+{
+  "name": "eslint-plugin-unfake",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "peerDependencies": {
+    "eslint": ">=10.0.0"
+  }
+}
