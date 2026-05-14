@@ -7,7 +7,7 @@
     "dev-lit": "pnpm --filter=playground-lit run dev",
     "dev-react": "pnpm --filter=playground-react run dev",
     "build": "pnpm --filter=unfake run build",
-    "format": "pnpm run format",
+    "format": "pnpm -r run format",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "packageManager": "pnpm@10.33.0",
