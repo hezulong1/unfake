@@ -1,7 +1,15 @@
 {
   "search.exclude": {
     "**/dist": true,
-    "**/out": true
+  },
+  "files.exclude": {
+    "**/*.docx": true
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
   },
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "[vue]": {
@@ -10,5 +18,17 @@
       "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     }
+  },
+  // For tailwindCSS
+  "files.associations": {
+    "**/playground-react/**/*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classFunctions": ["cva", "cx", "clsx", "cn"],
+  "tailwindCSS.experimental.configFile": "packages/playground-react/src/index.css",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
   }
 }

@@ -1,9 +1,13 @@
 {
-  "name": "unfake-monorepo",
+  "name": "unfake-devcontainer",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "turbo run build --filter unfake",
+    "dev-vue": "pnpm --filter=playground-vue run dev",
+    "dev-lit": "pnpm --filter=playground-lit run dev",
+    "dev-react": "pnpm --filter=playground-react run dev",
+    "build": "pnpm --filter=unfake run build",
+    "format": "pnpm run format",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "packageManager": "pnpm@10.33.0",
@@ -11,14 +15,25 @@
     "node": ">=22.18.0"
   },
   "devDependencies": {
-    "@types/node": "catalog:types",
-    "conventional-changelog-cli": "catalog:dev",
-    "eslint": "catalog:dev",
-    "eslint-config-h21": "catalog:dev",
-    "eslint-plugin-lit": "catalog:dev",
-    "minimist": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "turbo": "catalog:dev",
-    "typescript": "catalog:dev"
+    "@types/node": ">=22",
+    "bumpp": "^11.1.0",
+    "conventional-changelog": "^7.2.0",
+    "eslint": "^10.3.0",
+    "eslint-config-h21": "^1.5.0",
+    "fs-extra": "^11.3.5",
+    "globals": "^17.6.0",
+    "minimist": "^1.2.8",
+    "picocolors": "^1.1.1",
+    "pnpm": "^11.1.1",
+    "tsdown": "^0.22.0",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "typescript": "^6"
+      }
+    }
   }
 }
