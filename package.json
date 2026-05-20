@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev-vue": "pnpm --filter=playground-vue run dev",
-    "dev-lit": "pnpm --filter=playground-lit run dev",
-    "dev-react": "pnpm --filter=playground-react run dev",
-    "build": "pnpm --filter=unfake run build",
+    "dev-vue": "pnpm -F playground-vue run dev",
+    "dev-lit": "pnpm -F playground-lit run dev",
+    "dev-react": "pnpm -F playground-react run dev",
+    "build": "pnpm -F unfake run build",
     "format": "pnpm -r run format",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },

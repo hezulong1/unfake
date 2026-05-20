@@ -185,6 +185,9 @@ importers:
 
   packages/playground-vue:
     dependencies:
+      '@vue/repl':
+        specifier: ^4.7.2
+        version: 4.7.2
       '@vueuse/core':
         specifier: catalog:prod
         version: 14.3.0(vue@3.5.34(typescript@6.0.3))
@@ -1093,6 +1096,9 @@ packages:
 
   '@vue/reactivity@3.5.34':
     resolution: {integrity: sha512-y9XDjCEuBp+98k+UL5dbYkh57AHU4o6cxZedOPXw3bmrZZYLQsVHguGurq7hVrPCSrQtrnz1f9dssyFr+dMXfQ==}
+
+  '@vue/repl@4.7.2':
+    resolution: {integrity: sha512-6x0hisEd5XRYxhLit3fvPCfeUfXEjB3a8Z2Pl3scVa3kZjck4+ERQF4XCahC7PTabWb3He04u+j8q3MK4WZHrQ==}
 
   '@vue/runtime-core@3.5.34':
     resolution: {integrity: sha512-mKeBYvu8tcMSLhypAHBmriUFfWXKTCF/23Z4jiCoYK3UtWepkliViNLuR90V9XOyD62mUxs9p1jsrpK3CCGIzw==}
@@ -4139,6 +4145,8 @@ snapshots:
   '@vue/reactivity@3.5.34':
     dependencies:
       '@vue/shared': 3.5.34
+
+  '@vue/repl@4.7.2': {}
 
   '@vue/runtime-core@3.5.34':
     dependencies:
