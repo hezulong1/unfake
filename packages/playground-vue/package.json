@@ -16,6 +16,7 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "dependencies": {
+    "@vue/repl": "^4.7.2",
     "@vueuse/core": "catalog:prod",
     "unfake": "workspace: *",
     "vue": "catalog:prod",
