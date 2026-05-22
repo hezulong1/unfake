@@ -68,10 +68,9 @@ onMounted(() => {
 
 <template>
   <div
-    unfake-component
     :class="{ flexible }"
-    :natural-width="flexible ? naturalWidth : undefined"
-    :natural-height="flexible ? naturalHeight : undefined"
+    :data-natural-width="flexible ? naturalWidth : undefined"
+    :data-natural-height="flexible ? naturalHeight : undefined"
     :style="mergedStyle"
   >
     <slot />
